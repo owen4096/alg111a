@@ -1,28 +1,39 @@
-# lambda Calculus
+# Lambda Calculus
 
-## 實作
+```
+$ python lambdaCalculus.py
+[✓] _TRUE
+[✓] _FALSE
+[✓] _AND
+[✓] _OR
+[✓] _XOR
+[✓] _NOT
+<function <lambda>.<locals>.<lambda>.<locals>.<lambda> at 
+0x000002457E21BDC0>
+[✓] _IDENTITY
+[✓] _SUCCESSOR
+[✓] _PREDECESSOR
+[✓] _ADDITION
+[✓] _SUBTRACTION
+[✓] _MULTIPLICATION
+[✓] _POWER
+[✓] _ABS_DIFFERENCE
+[✓] _IS_ZERO
+[✓] _IS_LESS_THAN
+[✓] _IS_LESS_THAN_EQUAL
+[✓] _IS_EQUAL
+[✓] _IS_NOT_EQUAL
+[✓] _IS_GREATER_THAN_EQUAL
+[✓] _IS_GREATER_THAN
+[✓] _IS_NULL
+[✓] _CAR
+[✓] _CDR
+[✓] _CONS
+[✓] _RANGE
+[✓] _MAP
 
-* https://github.com/gtramontina/lambda/blob/master/lambda.js
+--- Examples ---
 
-
-## 理論
-
-* https://github.com/sgillespie/lambda-calculus/blob/master/doc/lambda-calculus.md
-
-Lambda Calculus, abbreviated here as λ, has a few features that may seem peculiar at first. To start, all objects are functions. Every function accepts functions as arguments and returns functions [2]. Secondly, pure λ is untyped. There are several variants that add types, including the Simply Typed Lambda Calculus [3] and System F [4]. Finally, λ's functions can only take one argument [1].
-
-## Lambda Calculus 中的不可計算問題
-
-* [λ演算](https://zh.wikipedia.org/wiki/%CE%9B%E6%BC%94%E7%AE%97)
-* [Church, A. An unsolvable problem of elementary number theory.](https://www.ics.uci.edu/~lopes/teaching/inf212W12/readings/church.pdf)
-    * https://www.jstor.org/stable/2371045
-    * https://archive.org/details/sim_american-journal-of-mathematics_1936-04_58_2/page/345/mode/2up
-    * https://www.ics.uci.edu/~lopes/teaching/inf212W12/readings/church.pdf
-
-lambda表达式之间的等价性，无法找到某个通用的函数来判定。
-
-在1936年邱奇利用λ演算給出了對於判定性問題（Entscheidungsproblem） 的否定：關於兩個lambda運算式是否等價的命題，無法由一個「通用的演算法」判斷，這是不可判定效能夠證明的頭一個問題，甚至還在停机问题之先。
-
-THEOREM XVIII, There is no recursive function of a formula C, whose value is 2 or 1 according as C has a normal form or not.
-
-THEOREMXIX. There is no recursive function of two formulas A and B, whose value is 2 or 1 according as A conv B or not.
+[✓] _FACTORIAL: 5! = 120
+[✓] _FIBONACCI: 10 = 55
+```
