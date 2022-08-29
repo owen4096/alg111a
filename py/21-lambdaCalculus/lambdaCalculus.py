@@ -95,8 +95,7 @@ RANGE = lambda m:lambda n:Y(lambda f:lambda m:IF(IS_EQUAL(m)(n))\
 (NIL))(m)
 
 # print(RANGE(_three))
-
-print(RANGE(_three)(_five))
+# print(RANGE(_three)(_five))
 
 MAP = lambda x:lambda g:Y(lambda f:lambda x:IF(IS_NULL(x))\
   (lambda _: x)\
