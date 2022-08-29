@@ -7,7 +7,7 @@ def satisfy(exp, vars, values): # 測試 exp 在指令 vars[0..i]=values[0..i] �
         result = eval(exp)
         print(values, '=>', result)
         if result: return values
-        return
+        return None
     v0 = values.copy()
     v1 = values.copy()
     v0.append(0)
