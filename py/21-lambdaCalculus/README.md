@@ -8,8 +8,6 @@ $ python lambdaCalculus.py
 [✓] _OR
 [✓] _XOR
 [✓] _NOT
-<function <lambda>.<locals>.<lambda>.<locals>.<lambda> at 
-0x000002457E21BDC0>
 [✓] _IDENTITY
 [✓] _SUCCESSOR
 [✓] _PREDECESSOR
