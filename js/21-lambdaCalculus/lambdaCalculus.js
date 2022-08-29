@@ -1,6 +1,10 @@
 // Lambda Calculus 當中的所有資料結構都是用 closure 達成的
 // 換言之，所有的資料結構都是函數閉包。
 
+// 終於了解 Lambda Calculus 在玩些甚麼遊戲了。
+// 基本上就是，一切皆函數，資料結構也是透過函數 (像是 pair, car, cdr 包在 closure 裡面的)
+// 然後，每個函數都只接受一個參數，然後傳回一個值 (也是函數)。
+
 // Church Booleans : Logic -----------------------------------------------------------------------
 let IF    = c => x => y => c(x)(y) // if: λ c x y. c x y # if c then x else y.
 let TRUE  = x => y => x // if true then x # 兩個參數執行第一個

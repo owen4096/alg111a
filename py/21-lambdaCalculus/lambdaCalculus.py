@@ -51,10 +51,10 @@ POWER          = lambda x:lambda y:y(x)
 ABS_DIFFERENCE = lambda x:lambda y:ADDITION(SUBTRACTION(x)(y))(SUBTRACTION(y)(x))
 
 # Church Numerals
-_zero  = lambda f:IDENTITY
-_one   = SUCCESSOR(_zero)
-_two   = SUCCESSOR(_one)
-_three = SUCCESSOR(_two)
+_zero  = lambda f:IDENTITY # 用 λf. λx. x 當 0
+_one   = SUCCESSOR(_zero)  # λf. λf. λx. x 當 1
+_two   = SUCCESSOR(_one)   # λf. λf. λf. λx. x 當 2
+_three = SUCCESSOR(_two)   # ...
 _four  = MULTIPLICATION(_two)(_two)
 _five  = SUCCESSOR(_four)
 _eight = MULTIPLICATION(_two)(_four)
@@ -79,12 +79,6 @@ Y = lambda f:\
   (lambda x:f(lambda y:x(x)(y)))\
   (lambda x:f(lambda y:x(x)(y)))
 
-'''
-Y = lambda f:(\
-  (lambda x:f(lambda y:(x(x))(y)))\
-  (lambda x:f(lambda y:(x(x))(y)))\
-)
-'''
 # python 的 Y-Combinator 參考 https://lptk.github.io/programming/2019/10/15/simple-essence-y-combinator.html
 
 # Lists
@@ -95,7 +89,6 @@ CDR  = lambda p:p(FALSE)
 
 # RANGE = lambda m:lambda n:Y(lambda f:lambda m:IF(IS_EQUAL(m)(n))(lambda _: CONS(m)(NIL))(lambda _: CONS(m)(f(SUCCESSOR(m))))())(m)
 
-# 以下原本 lambda _: 改為 lambda: ，這樣才能接受 0 個參數
 RANGE = lambda m:lambda n:Y(lambda f:lambda m:IF(IS_EQUAL(m)(n))\
   (lambda _: CONS(m)(NIL))\
   (lambda _: CONS(m)(f(SUCCESSOR(m))))\
@@ -174,10 +167,6 @@ TEST('CDR')(ASSERT(AND\
 TEST('CONS')(ASSERT(AND\
   (IS_EQUAL(CDR(CDR(CONS(_two)(CONS(_one)(_three)))))(_three))\
   (IS_EQUAL(CAR(CDR(CONS(_five)(CONS(_two)(CONS(_one)(_three))))))(_two))))
-
-
-
-# TEST('RANGE')(ASSERT(IS_EQUAL(CAR(RANGE(_three)(_five)))(_three)))
 
 TEST('RANGE')(ASSERT(AND(\
   AND\
