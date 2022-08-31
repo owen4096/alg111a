@@ -6,9 +6,9 @@ def H (procedure, Input):
 # 那麼我們可以呼叫 H 來寫個函數，讓你的 H 永遠判斷錯誤。
 def U (P) :
     if H(P, P) == 1: # 如果會停
-      while (True): pass # 那麼就不停
+        while (True): pass # 那麼就不停
     else: # else 不會停
-      return 1 # 那麼就停
+        return 1 # 那麼就停
 
 # H(U, U) = ?
 
