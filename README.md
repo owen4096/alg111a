@@ -7,3 +7,7 @@
 程式語言       | Python
 難度           | 中等，修本門課者應至少已經學會一種程式語言。
 課程社團       | https://www.facebook.com/groups/ccccourse
+
+使用本課程資源請遵照 [授權聲明](LICENSE.md) !
+
+
