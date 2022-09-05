@@ -1,6 +1,21 @@
 import random
 from improveLoop import *
 
+class TruthTable:
+    def __init__(self, table, nIn, names):
+        self.nIn = nIn
+        self.nOut = len(table[0])-nIn
+        self.inputs = []
+        self.outputs = []
+        self.iNames = names[:nIn]
+        self.oNames = names[nIn:]
+        for row in table:
+            self.inputs.append(row[:nIn])
+            self.outputs.append(row[nIn:])
+
+    def rows(self):
+        return len(self.inputs)
+
 class Sat:
     def __init__(self):
         self.map = {} # 滿足該真值表的字典查表
@@ -90,3 +105,20 @@ def match(row, rule):
         if rule[i]!='-' and row[i]!=rule[i]:
             return False
     return True
+
+if __name__ == '__main__':
+    table = [
+    #abco1A0CPfR
+    "00001000001",
+    "00101001111",
+    "01001000110",
+    "01111001011",
+    "10001100100",
+    "10111101000",
+    "11011100001",
+    "11111101101"
+    ]
+
+    table = TruthTable(table, 3, ["a", "b", "c", "o", "one", "A", "zero", "C", "parity", "f", "Removable"])
+    rules = boolMinimize(table)
+    print(rules)
