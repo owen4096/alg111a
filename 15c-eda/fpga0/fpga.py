@@ -13,33 +13,6 @@ class FPGA:
             self.blocks.append(row)
         self.route = [[[0]*nLutIn for _ in range(ncol)] for _ in range(nrow)]
 
-and3   = [0,0,0,0,0,0,0,1]
-or3    = [0,1,1,1,1,1,1,1]
-xor3   = [0,1,1,0,1,0,0,1]
-carry3 = [0,0,0,1,0,1,1,1]
-mux2-1(s,a,b) = [0,0,1,1,0,1,0,1] # mux(s, a, b)
-
-def idx3(a,b,c):
-    return a<<2+b<<1+c
-
-class CLB3:
-    def __init__(self, n): # clk, out, cin, cout, row, add
-        self.lut1 = [-1]*8
-        self.lut2 = [-1]*8
-        self.reg  = -1
-
-    def run(i,cin,add,write,regOut):
-        a = self.lut1[i]
-        b = self.lut2[i]
-        i = idx3(cin, a, b)
-        sum = xor3[i]
-        cout = carry3[i]
-        regIn = 0 if add==0 else sum  # op:'0:a 1:add'
-        if write: self.reg = regIn
-        return {'cout':cout, 'out':reg if regOut else regIn }
-
-
-
 '''
 class LUT:
     def __init__(self, outs):
