@@ -9,7 +9,8 @@ def fibonacci(n):
     fib[n] = fibonacci(n - 1) + fibonacci(n - 2)
     return fib[n]
 
-n = 35
+# n = 35
+n = 60
 startTime = datetime.now()
 print(f'fibonacci({n})={fibonacci(n)}')
 endTime = datetime.now()

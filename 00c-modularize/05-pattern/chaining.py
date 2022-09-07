@@ -10,3 +10,4 @@ class Number:
 
 a = Number(3)
 print('a.add(5).mul(2)=', a.add(5).mul(2))
+print('a.add(5).mul(2).add(3).mul(3)=', a.add(5).mul(2).add(3).mul(3))
