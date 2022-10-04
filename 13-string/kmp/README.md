@@ -1,12 +1,11 @@
 # Knuth-Morris-Pratt 快速字串比對演算法
 
-* [kmp.js](kmp.js) -- 算法實作
-* [kmpTest.js](kmpTest.js) -- 測試案例
+* [KMP算法](https://zh.wikipedia.org/wiki/KMP%E7%AE%97%E6%B3%95)
+* https://gist.github.com/m00nlight/daa6786cc503fde12a77
 
 ## 執行
 
 ```
-$ deno run kmpTest.js
-kmp(she sells seashells by the seashore, shell) =  13
-kmp(she sells seashells by the seashore, seaweed) =  -1
+$ python kmp.py
+all test pass
 ```
