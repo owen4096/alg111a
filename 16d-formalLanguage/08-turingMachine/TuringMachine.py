@@ -1,7 +1,5 @@
 # https://zh.wikipedia.org/wiki/%E5%9B%BE%E7%81%B5%E6%9C%BA
-# https://en.wikipedia.org/wiki/Turing_machine_examples
-# https://www.javatpoint.com/examples-of-turing-machine (讚)
-# https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-jflap/index.html (讚)
+# https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-jflap/index.html
 class TuringMachine:
     def __init__(self, states, ichars, ochars, actionMap, start, accepts, rejects):
         self.states = states
