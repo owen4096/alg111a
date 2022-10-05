@@ -1,5 +1,10 @@
 # Turing Machine
 
+
+* [圖靈機](https://zh.wikipedia.org/zh-tw/%E5%9B%BE%E7%81%B5%E6%9C%BA)
+* 測試的 anbncn 圖靈機來源
+    * https://www.cs.odu.edu/~zeil/cs390/latest/Public/turing-jflap/index.html
+
 ## TuringMachine.py
 
 ```
