@@ -1,4 +1,4 @@
-import random
+from random import *
 
 def S():
     if random()<0.7:
