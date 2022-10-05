@@ -22,15 +22,15 @@ class TuringMachine:
         i = 0 # 读写头指向第0号格子
         while True:
             ichar = self.tape[i]
-            # print('state=', state, 'ichar=', ichar)
             acts = self.action(state, ichar)
-            # print('acts=', acts)
             if acts == None: return False
             state, ochar, move = acts # 執行動作
             self.tape[i] = ochar # 改寫這一格符號
-            if move == 'L' and i > 0: i -= 1 # 向左移動 (但不能越過磁帶開頭)
+            if move == 'L':
+                if i > 0: i -= 1 # 向左移動 (但不能越過磁帶開頭)
             elif move == 'R': i += 1 # 向右移動
-            else: pass # move == '-' # 不移動
+            elif move == '-': pass # 不移動
+            else: raise Exception(f'move = {move} not allowed!')
             if state in self.accepts:
                 return True
             if state in self.rejects:
