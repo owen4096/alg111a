@@ -22,7 +22,9 @@ aabbcc: True
 
 ![](./img/TuringMachine_anbncn.png)
 
-```mermaid
+上圖的原始碼
+
+```
 digraph TuringMachine_anbncn {
 	rankdir=LR;
 	size="8,5"
