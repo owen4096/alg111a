@@ -1,18 +1,58 @@
+from msilib import sequence
 from ipData import *
 # 這是習題，請完成以下程式碼！
+import random
+import time
+time1 = time.time()
+ans = 0
 
-'''
-def height(x):
-    p = 1000
-    score = 7*x[1] + 8*x[2] + 2*x[3] + 9*x[4] + 6*x[5]
-    f1 = 5*x[1]	+	7*x[2]	+	9*x[3] + 2*x[4] + 1*x[5]
-    p1 = p*(f1-250) if f1>250 else 0 
-    f2 = 18x1	+	4x2	–	9x3	+	10x4	+	12x5 #	≤	285
-    p2 = p*(f2-285) if f2>285 else 0 
-    f3 = 4x1	+	7x2	+	3x3	+	8x4	+	5x5	# ≤	211
-    p3 = p*(f2-285) if f2>285 else 0 
-    f4 = 5x1	+	13x2	+	16x3	+	3x4	–	7x5	≤	315
-    p4 = p*(f2-285) if f2>285 else 0 
-    return score - p1 - p2 - p3 - p4
-'''
+def check(n):
+    temp = 0
+    k=0
+    
+  
+    for i in range(len(coefs)):
+        for j in range(len(coefs[i])):
+            temp += coefs[i][j] * n[j]    
+        if temp > maxs[i]:
+            k -= 778844
+        temp=0
+    for l in range(len(n)):
+        k += n[l] * cost_fn[l]    
+    return k 
+
+def tryip():
+    counter = 0
+    data = [0.0, 0.0, 0.0, 0.0, 0.0]
+    h = 1
+    while counter < 50000:
+
+        counter+=1
+        dx0 = random.randint(-h, h)
+        dx1 = random.randint(-h, h)
+        dx2 = random.randint(-h, h)
+        dx3 = random.randint(-h, h)
+        dx4 = random.randint(-h, h)
+      
+
+        data_temp = [data[0]+dx0, data[1]+dx1, data[2]+dx2, data[3]+dx3, data[4]+dx4]
+      
+        for i in range(len(data_temp)):
+            if data_temp[i] < 0:
+                data_temp[i] = 0
+        
+        if check(data) < check(data_temp):
+            data = data_temp
+    return data
+
+
+t = tryip()
+for i in range(len(t)):
+    print(unknowns[i],"=", int(t[i]))
+for i in range(len(t)):
+    ans += t[i] * cost_fn[i]
+time2 =time.time()    
+print(ans,"花費了:",time2-time1,"秒")
+
+
 

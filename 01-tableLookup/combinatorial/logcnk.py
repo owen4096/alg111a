@@ -11,5 +11,5 @@ def factorial(n):
     logf=logFactorial(n)
     return int(round(math.exp(logf),1))
 
-
-print(factorial(10))
+if __name__=='__main__':
+    print(factorial(10))
