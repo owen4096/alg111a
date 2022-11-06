@@ -1,10 +1,9 @@
 import random
 
-def randomCombination(pA, k):
-	A = pA.copy()
+def randomCombination(A, k):
 	chooses = []
 	for _ in range(k):
-		i = random.randrange(0, len(A))
+		i = random.randrange(0, A[-1])
 		if not A[i] in chooses:
 			chooses.append(A[i])
 		
@@ -13,6 +12,6 @@ def randomCombination(pA, k):
 		print(chooses)
 	return 
 
-A = [1,2,3,4,5]
+arr = [1,2,3,4,5]
 for _ in range(30):
-	randomCombination(A, 3)
+	randomCombination(arr, 3)
