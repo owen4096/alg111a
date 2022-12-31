@@ -44,7 +44,7 @@ if __name__ == '__main__':
 但0-1 Knapack 還得需要回頭看放入這個物品拿出那個物品結果會不會更好,所以cost time大幅度提升</br>
 基本上程式碼算是可以完全看懂,但實在是沒辦法自己寫出來,能做到的只有把整個概念的presudo code寫下來而已</br>
 
-<img src="https://github.com/owen4096/co109a/blob/master/01/and.png" width="500" height="400"  align=center /> 
+<img src="https://github.com/owen4096/alg111a/blob/main/mid_and_final/01knap.jpg" width="500" height="400"  align=center /> 
 
 以上為我自己嘗試寫出並trace的結果,算是一種自學筆記吧,概念上都是沒問題,就是程式寫不太出來就是了,在遞迴這方面還是得在加強</br>
 
