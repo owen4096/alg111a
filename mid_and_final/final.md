@@ -10,7 +10,7 @@
 {3, 34, 4, 12, 5, 2}，sum = 30 FALSE</br>
 
 
-### 以下為程式碼區段 由chatGPT產上
+### 以下為程式碼區段 由chatGPT產生
 
 <pre><code>
 
